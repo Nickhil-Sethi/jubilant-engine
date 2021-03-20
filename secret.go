@@ -55,7 +55,7 @@ func (s *Secret) encrypt(plaintext string) (string, Error) {
 	}
 
 	ciphertext := gcm.Seal(nonce, nonce, plaintext, nil)
-	return return ciphertext, nil
+	return ciphertext, nil
 }
 
 func (s *Secret) decrypt(ciphertext string) (string, Error) {
